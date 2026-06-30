@@ -1,0 +1,91 @@
+2026-06-30 21:46:56.601 | INFO     | __main__:main:15 - Starting Market Analysis AI Agent
+2026-06-30 21:46:56.621 | INFO     | __main__:main:19 - Configuration loaded
+2026-06-30 21:46:56.621 | INFO     | __main__:main:37 - Starting AutoResearch iteration 1/10
+2026-06-30 21:47:11.370 | INFO     | __main__:main:53 - Iteration 1 performance (sharpe_ratio): 0
+2026-06-30 21:47:11.374 | INFO     | __main__:main:63 - New best performance: 0
+2026-06-30 21:47:13.395 | INFO     | __main__:main:37 - Starting AutoResearch iteration 2/10
+2026-06-30 21:47:18.926 | INFO     | __main__:main:53 - Iteration 2 performance (sharpe_ratio): 0
+2026-06-30 21:47:18.928 | INFO     | __main__:main:57 - Convergence reached at iteration 2
+2026-06-30 21:47:18.928 | INFO     | __main__:main:69 - AutoResearch loop completed
+2026-06-30 21:47:18.928 | INFO     | __main__:main:71 - Best strategies found with sharpe_ratio: 0
+2026-06-30 22:04:24.012 | INFO     | __main__:main:15 - Starting Market Analysis AI Agent
+2026-06-30 22:04:24.022 | INFO     | __main__:main:19 - Configuration loaded
+2026-06-30 22:04:24.023 | INFO     | __main__:main:37 - Starting AutoResearch iteration 1/10
+2026-06-30 22:04:32.918 | INFO     | __main__:main:53 - Iteration 1 performance (sharpe_ratio): 0
+2026-06-30 22:04:32.918 | INFO     | __main__:main:63 - New best performance: 0
+2026-06-30 22:04:34.933 | INFO     | __main__:main:37 - Starting AutoResearch iteration 2/10
+2026-06-30 22:04:40.069 | INFO     | __main__:main:53 - Iteration 2 performance (sharpe_ratio): 0
+2026-06-30 22:04:40.069 | INFO     | __main__:main:57 - Convergence reached at iteration 2
+2026-06-30 22:04:40.069 | INFO     | __main__:main:69 - AutoResearch loop completed
+2026-06-30 22:04:40.069 | INFO     | __main__:main:71 - Best strategies found with sharpe_ratio: 0
+2026-06-30 22:16:04.280 | INFO     | __main__:main:15 - Starting Market Analysis AI Agent
+2026-06-30 22:16:04.286 | INFO     | __main__:main:19 - Configuration loaded
+2026-06-30 22:16:04.288 | INFO     | __main__:main:37 - Starting AutoResearch iteration 1/10
+2026-06-30 22:16:11.977 | INFO     | __main__:main:53 - Iteration 1 performance (sharpe_ratio): 0
+2026-06-30 22:16:11.978 | INFO     | __main__:main:63 - New best performance: 0
+2026-06-30 22:16:13.996 | INFO     | __main__:main:37 - Starting AutoResearch iteration 2/10
+2026-06-30 22:16:19.355 | INFO     | __main__:main:53 - Iteration 2 performance (sharpe_ratio): 0
+2026-06-30 22:16:19.356 | INFO     | __main__:main:57 - Convergence reached at iteration 2
+2026-06-30 22:16:19.356 | INFO     | __main__:main:69 - AutoResearch loop completed
+2026-06-30 22:16:19.357 | INFO     | __main__:main:71 - Best strategies found with sharpe_ratio: 0
+2026-06-30 22:27:46.385 | INFO     | __main__:main:15 - Starting Market Analysis AI Agent
+2026-06-30 22:27:46.390 | INFO     | __main__:main:19 - Configuration loaded
+2026-06-30 22:27:46.390 | INFO     | __main__:main:37 - Starting AutoResearch iteration 1/10
+2026-06-30 22:27:54.097 | INFO     | __main__:main:53 - Iteration 1 performance (sharpe_ratio): 0
+2026-06-30 22:27:54.097 | INFO     | __main__:main:63 - New best performance: 0
+2026-06-30 22:27:56.120 | INFO     | __main__:main:37 - Starting AutoResearch iteration 2/10
+2026-06-30 22:28:01.555 | INFO     | __main__:main:53 - Iteration 2 performance (sharpe_ratio): 0
+2026-06-30 22:28:01.556 | INFO     | __main__:main:57 - Convergence reached at iteration 2
+2026-06-30 22:28:01.556 | INFO     | __main__:main:69 - AutoResearch loop completed
+2026-06-30 22:28:01.556 | INFO     | __main__:main:71 - Best strategies found with sharpe_ratio: 0
+2026-06-30 22:30:12.166 | INFO     | __main__:main:15 - Starting Market Analysis AI Agent
+2026-06-30 22:30:12.171 | INFO     | __main__:main:19 - Configuration loaded
+2026-06-30 22:30:12.171 | INFO     | __main__:main:37 - Starting AutoResearch iteration 1/10
+2026-06-30 22:30:19.323 | INFO     | __main__:main:53 - Iteration 1 performance (sharpe_ratio): 0
+2026-06-30 22:30:19.324 | INFO     | __main__:main:63 - New best performance: 0
+2026-06-30 22:30:21.348 | INFO     | __main__:main:37 - Starting AutoResearch iteration 2/10
+2026-06-30 22:30:26.221 | INFO     | __main__:main:53 - Iteration 2 performance (sharpe_ratio): 0
+2026-06-30 22:30:26.221 | INFO     | __main__:main:57 - Convergence reached at iteration 2
+2026-06-30 22:30:26.222 | INFO     | __main__:main:69 - AutoResearch loop completed
+2026-06-30 22:30:26.223 | INFO     | __main__:main:71 - Best strategies found with sharpe_ratio: 0
+2026-06-30 22:37:12.665 | INFO     | __main__:main:15 - Starting Market Analysis AI Agent
+2026-06-30 22:37:12.668 | INFO     | __main__:main:19 - Configuration loaded
+2026-06-30 22:37:12.669 | INFO     | __main__:main:38 - Starting AutoResearch iteration 1/10
+2026-06-30 22:37:18.559 | INFO     | __main__:main:54 - Iteration 1 performance (sharpe_ratio): -2.662193597810974
+2026-06-30 22:37:18.559 | INFO     | __main__:main:64 - New best performance: -2.662193597810974
+2026-06-30 22:37:18.781 | INFO     | __main__:main:38 - Starting AutoResearch iteration 2/10
+2026-06-30 22:37:22.085 | INFO     | __main__:main:54 - Iteration 2 performance (sharpe_ratio): -2.0550317508066636
+2026-06-30 22:37:22.085 | INFO     | __main__:main:64 - New best performance: -2.0550317508066636
+2026-06-30 22:37:22.307 | INFO     | __main__:main:38 - Starting AutoResearch iteration 3/10
+2026-06-30 22:37:25.220 | INFO     | __main__:main:54 - Iteration 3 performance (sharpe_ratio): -1.499633607723552
+2026-06-30 22:37:25.220 | INFO     | __main__:main:64 - New best performance: -1.499633607723552
+2026-06-30 22:37:25.437 | INFO     | __main__:main:38 - Starting AutoResearch iteration 4/10
+2026-06-30 22:37:29.730 | INFO     | __main__:main:54 - Iteration 4 performance (sharpe_ratio): -1.498448602745825
+2026-06-30 22:37:29.731 | INFO     | __main__:main:58 - Convergence reached at iteration 4
+2026-06-30 22:37:29.731 | INFO     | __main__:main:70 - AutoResearch loop completed
+2026-06-30 22:37:29.732 | INFO     | __main__:main:72 - Best strategies found with sharpe_ratio: -1.499633607723552
+2026-06-30 22:40:30.250 | INFO     | __main__:main:15 - Starting Market Analysis AI Agent
+2026-06-30 22:40:30.255 | INFO     | __main__:main:19 - Configuration loaded
+2026-06-30 22:40:30.255 | INFO     | __main__:main:38 - Starting AutoResearch iteration 1/10
+2026-06-30 22:40:35.766 | INFO     | __main__:main:54 - Iteration 1 performance (sharpe_ratio): -2.6729235566474503
+2026-06-30 22:40:35.767 | INFO     | __main__:main:64 - New best performance: -2.6729235566474503
+2026-06-30 22:40:35.994 | INFO     | __main__:main:38 - Starting AutoResearch iteration 2/10
+2026-06-30 22:40:38.967 | INFO     | __main__:main:54 - Iteration 2 performance (sharpe_ratio): -2.712716179055044
+2026-06-30 22:40:39.187 | INFO     | __main__:main:38 - Starting AutoResearch iteration 3/10
+2026-06-30 22:40:42.546 | INFO     | __main__:main:54 - Iteration 3 performance (sharpe_ratio): -1.6894493925921645
+2026-06-30 22:40:42.547 | INFO     | __main__:main:64 - New best performance: -1.6894493925921645
+2026-06-30 22:40:42.773 | INFO     | __main__:main:38 - Starting AutoResearch iteration 4/10
+2026-06-30 22:40:46.872 | INFO     | __main__:main:54 - Iteration 4 performance (sharpe_ratio): -2.672791410972759
+2026-06-30 22:40:47.095 | INFO     | __main__:main:38 - Starting AutoResearch iteration 5/10
+2026-06-30 22:40:49.973 | INFO     | __main__:main:54 - Iteration 5 performance (sharpe_ratio): -2.061601148746956
+2026-06-30 22:40:50.198 | INFO     | __main__:main:38 - Starting AutoResearch iteration 6/10
+2026-06-30 22:40:53.170 | INFO     | __main__:main:54 - Iteration 6 performance (sharpe_ratio): -1.4676464823817366
+2026-06-30 22:40:53.171 | INFO     | __main__:main:64 - New best performance: -1.4676464823817366
+2026-06-30 22:40:53.393 | INFO     | __main__:main:38 - Starting AutoResearch iteration 7/10
+2026-06-30 22:40:57.094 | INFO     | __main__:main:54 - Iteration 7 performance (sharpe_ratio): -1.427179355116757
+2026-06-30 22:40:57.096 | INFO     | __main__:main:64 - New best performance: -1.427179355116757
+2026-06-30 22:40:57.317 | INFO     | __main__:main:38 - Starting AutoResearch iteration 8/10
+2026-06-30 22:41:01.052 | INFO     | __main__:main:54 - Iteration 8 performance (sharpe_ratio): -1.42809706319442
+2026-06-30 22:41:01.052 | INFO     | __main__:main:58 - Convergence reached at iteration 8
+2026-06-30 22:41:01.053 | INFO     | __main__:main:70 - AutoResearch loop completed
+2026-06-30 22:41:01.053 | INFO     | __main__:main:72 - Best strategies found with sharpe_ratio: -1.427179355116757

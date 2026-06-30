@@ -1,0 +1,56 @@
+# Market Analysis AI Agent Configuration
+
+# Data collection settings
+data_collection:
+  sources:
+    - alpha_vantage
+    - yahoo_finance
+    - fred
+  update_frequency: 1d  # daily, weekly, monthly
+
+# Analysis settings
+analysis:
+  technical_indicators:
+    - sma
+    - ema
+    - rsi
+    - macd
+  fundamental_metrics:
+    - pe_ratio
+    - pb_ratio
+    - debt_to_equity
+  sentiment_sources:
+    - news
+    - social_media
+
+# Strategy generation settings
+strategy_generation:
+  types:
+    - momentum
+    - mean_reversion
+    - arbitrage
+  risk_tolerance: moderate  # conservative, moderate, aggressive
+
+# Backtesting settings
+backtesting:
+  initial_capital: 100000
+  commission: 0.001
+  slippage: 0.0005
+  benchmark: SPY
+
+# Reporting settings
+reporting:
+  format: pdf  # pdf, html, markdown
+  frequency: weekly
+  include_charts: true
+
+# Logging settings
+logging:
+  level: INFO
+  file_retention_days: 30
+
+# AutoResearch loop settings
+autoresearch:
+  max_iterations: 10
+  convergence_threshold: 0.01
+  performance_metric: sharpe_ratio
