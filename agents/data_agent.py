@@ -31,9 +31,9 @@ class DataAgent:
         
         for symbol in self.symbols:
             try:
-                # Get historical data for the past 6 months
+                # Get historical data for the past 2 years
                 ticker = yf.Ticker(symbol)
-                hist = ticker.history(period="6mo")
+                hist = ticker.history(period="2y")
                 
                 if not hist.empty:
                     market_data[symbol] = {
@@ -60,7 +60,7 @@ class DataAgent:
         for index in indices:
             try:
                 ticker = yf.Ticker(index)
-                hist = ticker.history(period="6mo")
+                hist = ticker.history(period="2y")
                 if not hist.empty:
                     market_data['indices'][index] = {
                         'price_data': hist,
