@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Analysis AI Agent</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 1.2rem;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .form-section {
+            background: #f8f9ff;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .form-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .form-section h2::before {
+            content: "⚙️";
+            margin-right: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #4facfe;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            flex: 1;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(79, 172, 254, 0.4);
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+        
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .results-section {
+            background: #f8f9ff;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .results-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .results-section h2::before {
+            content: "📊";
+            margin-right: 10px;
+        }
+        
+        #results {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+            min-height: 200px;
+            white-space: pre-wrap;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            overflow-x: auto;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #6c757d;
+            font-style: italic;
+        }
+        
+        .success {
+            color: #28a745;
+        }
+        
+        .error {
+            color: #dc3545;
+        }
+        
+        .warning {
+            color: #ffc107;
+        }
+        
+        .info {
+            color: #17a2b8;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #6c757d;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .footer a {
+            color: #4facfe;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .form-section {
+                padding: 20px;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+        }
+        
+        .parameter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .help-text {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        
+        .example {
+            background: #e9ecef;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📈 Market Analysis AI Agent</h1>
+            <p>Autonomous multi-agent system for market research, strategy generation, and backtesting</p>
+        </div>
+        
+        <div class="content">
+            <div class="form-section">
+                <h2>Analysis Configuration</h2>
+                
+                <div class="parameter-grid">
+                    <div class="form-group">
+                        <label for="symbols">Stock Symbols (comma-separated)</label>
+                        <input type="text" id="symbols" name="symbols" value="AAPL,MSFT,GOOGL,AMZN,TSLA" placeholder="Enter stock symbols like AAPL,MSFT,GOOGL">
+                        <div class="help-text">Use commas to separate multiple symbols. Examples: AAPL,MSFT or ^GSPC,^DJI for indices</div>
+                        <div class="example">Example: AAPL,MSFT,GOOGL,AMZN,TSLA</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="period">Analysis Period</label>
+                        <select id="period" name="period">
+                            <option value="1mo">1 Month</option>
+                            <option value="3mo">3 Months</option>
+                            <option value="6mo">6 Months</option>
+                            <option value="1y">1 Year</option>
+                            <option value="2y" selected>2 Years</option>
+                            <option value="5y">5 Years</option>
+                            <option value="10y">10 Years</option>
+                            <option value="max">Maximum Available</option>
+                        </select>
+                        <div class="help-text">Historical data period for analysis</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="initial_capital">Initial Capital ($)</label>
+                        <input type="number" id="initial_capital" name="initial_capital" value="100000" min="1000" step="1000">
+                        <div class="help-text">Starting capital for backtesting</div>
+                        <div class="example">Example: 100000</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="commission">Commission Rate</label>
+                        <input type="number" id="commission" name="commission" value="0.001" min="0" max="0.1" step="0.0001">
+                        <div class="help-text">Trading commission as decimal (0.001 = 0.1%)</div>
+                        <div class="example">Example: 0.001</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="slippage">Slippage</label>
+                        <input type="number" id="slippage" name="slippage" value="0.0005" min="0" max="0.1" step="0.0001">
+                        <div class="help-text">Price slippage as decimal (0.0005 = 0.05%)</div>
+                        <div class="example">Example: 0.0005</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="benchmark">Benchmark Index</label>
+                        <input type="text" id="benchmark" name="benchmark" value="SPY" placeholder="Enter benchmark symbol">
+                        <div class="help-text">Benchmark for performance comparison (e.g., SPY, QQQ, ^GSPC)</div>
+                        <div class="example">Example: SPY</div>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button type="submit" id="analyzeBtn" class="btn btn-primary">
+                        🚀 Start Analysis
+                    </button>
+                    <button type="button" id="resetBtn" class="btn btn-secondary">
+                        🔄 Reset Form
+                    </button>
+                </div>
+            </div>
+            
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <h2>Analysis Results</h2>
+                <div id="results" class="results-content">
+                    <div class="loading">Ready to analyze...</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Market Analysis AI Agent &copy; 2026 | Powered by AutoResearch Loop</p>
+            <p><a href="https://github.com/harshD03-lab/Market-Analysis-AI-Agent" target="_blank">View on GitHub</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('analyzeBtn');
+            const resetBtn = document.getElementById('resetBtn');
+            const resultsSection = document.getElementById('resultsSection');
+            const resultsDiv = document.getElementById('results');
+            
+            // Handle form submission
+            document.querySelector('.button-group').addEventListener('click', function(e) {
+                if (e.target.id === 'analyzeBtn') {
+                    e.preventDefault();
+                    startAnalysis();
+                } else if (e.target.id === 'resetBtn') {
+                    resetForm();
+                }
+            });
+            
+            function startAnalysis() {
+                // Disable button and show loading
+                const btn = document.getElementById('analyzeBtn');
+                btn.disabled = true;
+                btn.innerHTML = '⏳ Analyzing...';
+                
+                // Show results section
+                resultsSection.style.display = 'block';
+                resultsDiv.innerHTML = '<div class="loading">Starting analysis...</div>';
+                
+                // Get form data
+                const formData = {
+                    symbols: document.getElementById('symbols').value,
+                    period: document.getElementById('period').value,
+                    initial_capital: document.getElementById('initial_capital').value,
+                    commission: document.getElementById('commission').value,
+                    slippage: document.getElementById('slippage').value,
+                    benchmark: document.getElementById('benchmark').value
+                };
+                
+                // Send request to backend
+                fetch('/analyze', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Re-enable button
+                    btn.disabled = false;
+                    btn.innerHTML = '🚀 Start Analysis';
+                    
+                    // Display results
+                    if (data.status === 'success') {
+                        displayResults(data);
+                    } else {
+                        displayError(data.message || 'Unknown error occurred');
+                    }
+                })
+                .catch(error => {
+                    // Re-enable button
+                    btn.disabled = false;
+                    btn.innerHTML = '🚀 Start Analysis';
+                    
+                    displayError('Network error: ' + error.message);
+                });
+            }
+            
+            function displayResults(data) {
+                let html = '<h3>✅ Analysis Completed Successfully</h3>';
+                
+                if (data.timestamp) {
+                    html += `<p><strong>Completed:</strong> ${new Date(data.timestamp).toLocaleString()}</p>`;
+                }
+                
+                if data.iteration_completed !== undefined) {
+                    html += `<p><strong>Iterations Completed:</strong> ${data.iteration_completed}</p>`;
+                }
+                
+                if (data.best_performance !== null && data.best_performance !== undefined) {
+                    html += `<p><strong>Best Performance (${data.performance_metric}):</strong> ${data.best_performance.toFixed(4)}</p>`;
+                }
+                
+                if data.backtesting_results) {
+                    html += '<h4>📊 Backtesting Results:</h4>';
+                    html += '<pre class="results-content">' + JSON.stringify(data.backtesting_results, null, 2) + '</pre>';
+                }
+                
+                if data.best_strategies) {
+                    html += '<h4>🎯 Best Strategies:</h4>';
+                    html += '<pre class="results-content">' + JSON.stringify(data.best_strategies, null, 2) + '</pre>';
+                }
+                
+                if data.report_path) {
+                    html += `<p><strong>Report Generated:</strong> <a href="/download/${encodeURIComponent(data.report_path.split('/').pop())}" target="_blank">Download Report</a></p>`;
+                }
+                
+                if data.warning) {
+                    html += `<p class="warning">⚠️ Warning: ${data.warning}</p>`;
+                }
+                
+                resultsDiv.innerHTML = html;
+            }
+            
+            function displayError(message) {
+                resultsDiv.innerHTML = `<p class="error">❌ Error: ${message}</p>`;
+            }
+            
+            function resetForm() {
+                document.getElementById('symbols').value = 'AAPL,MSFT,GOOGL,AMZN,TSLA';
+                document.getElementById('period').value = '2y';
+                document.getElementById('initial_capital').value = '100000';
+                document.getElementById('commission').value = '0.001';
+                document.getElementById('slippage').value = '0.0005';
+                document.getElementById('benchmark').value = 'SPY';
+                
+                resultsSection.style.display = 'none';
+                resultsDiv.innerHTML = '<div class="loading">Ready to analyze...</div>';
+            }
+        });
+    </script>
+</body>
+</html>
