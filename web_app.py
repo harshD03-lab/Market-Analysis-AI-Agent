@@ -221,5 +221,8 @@ if __name__ == '__main__':
     os.makedirs('logs', exist_ok=True)
     os.makedirs('templates', exist_ok=True)
     
+    # Get port from environment variable (for platforms like Render, Heroku) or default to 5000
+    port = int(os.environ.get('PORT', 5000))
+    
     # Run the app
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=False)
+    app.run(host='0.0.0.0', port=port, debug=False)

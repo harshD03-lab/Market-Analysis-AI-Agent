@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Analysis AI Agent</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 1.2rem;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .info-box {
+            background: #f8f9ff;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .info-box h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-box h2::before {
+            content: "ℹ️";
+            margin-right: 10px;
+        }
+        
+        .info-box p {
+            line-height: 1.6;
+            color: #34495e;
+        }
+        
+        .info-box ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .info-box li {
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .cta-button {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto 30px auto;
+            padding: 15px 30px;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #6c757d;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .footer a {
+            color: #4facfe;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .info-box {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📈 Market Analysis AI Agent</h1>
+            <p>Autonomous multi-agent system for market research, strategy generation, and backtesting</p>
+        </div>
+        
+        <div class="content">
+            <div class="info-box">
+                <h2>About This Project</h2>
+                <p>This is an autonomous multi-agent AI system that performs market research, data analysis, strategy generation, backtesting, and iterative optimization using an AutoResearch loop.</p>
+                
+                <h3>🔧 Features</h3>
+                <ul>
+                    <li>Multi-agent architecture for specialized tasks</li>
+                    <li>AutoResearch loop for continuous improvement</li>
+                    <li>Market research and data collection</li>
+                    <li>Strategy generation based on research</li>
+                    <li>Backtesting of generated strategies</li>
+                    <li>Iterative optimization based on backtest results</li>
+                </ul>
+                
+                <h3>🚀 How to Use</h3>
+                <p>The full application with interactive analysis is available through our hosted backend. To use the complete system:</p>
+                <ul>
+                    <li>Clone this repository</li>
+                    <li>Install dependencies: <code>pip install -r requirements.txt</code></li>
+                    <li>Run the Flask application: <code>python web_app.py</code></li>
+                    <li>Access at <code>http://localhost:5000</code></li>
+                </ul>
+            </div>
+            
+            <a href="https://github.com/harshD03-lab/Market-Analysis-AI-Agent" class="cta-button">
+                View Source Code on GitHub
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p>Market Analysis AI Agent &copy; 2026</p>
+            <p>
+                <a href="https://github.com/harshD03-lab/Market-Analysis-AI-Agent">GitHub Repository</a> |
+                <a href="mailto:harsh@example.com">Contact</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
